@@ -11,11 +11,8 @@
     <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
     <link href="reveal.js/css/reveal.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/production/prism.min.css">
     <link rel="stylesheet" href="assets/styles/production/styles.min.css" id="theme">
-
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="reveal.js/lib/css/dark.css">
-    <link href="reveal.js/lib/css/zenburn.css" rel="stylesheet">
     <script>
     document.write('<link rel="stylesheet" href="reveal.js/css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
     </script>
@@ -26,7 +23,7 @@
     <div class="slides">
         
       <section>
-        <h1 class="uppercase" style="font-size: 50px;">Building With Bootstrap</h1>
+        <h1 class="uppercase no_margin" style="font-size: 60px;">Building With Bootstrap</h1>
         <div class="meta blue uppercase small_meta">2016-07-30 &#8729; GDI MPLS &#8729; Clare O&rsquo;Neill</div>
         <img src="assets/images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
 
@@ -38,7 +35,599 @@
           <div class="meta gold tiny_meta">Slides: <span class="white">!!!SLIDEURL!!!</span></div>
           <div class="meta gold tiny_meta">Project Files: <span class="white">!!!DOWNLOADLINK!!!</span></div>
         </div>
+      </section><!-- intro -->
+
+      <section>
+        <h2 class="gold">Welcome!</h2>
+        <p class="fragment big_p">Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+        <div class="fragment">
+          <div class="spacer"></div>
+          <h4 class="blue">Some rules:</h4>
+          <ul style="margin-top: 0;">
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+        </div>
+      </section><!-- /welcome -->
+
+      <section>
+        <h2 class="gold">Introductions</h2>
+        <div class="spacer"></div>
+        <h4 class="fragment blue">Meet your instructor</h4>
+        <div class="spacer"></div>
+        <h4 class="fragment blue">Meet your TAs</h4>
+        <div class="spacer"></div>
+        <h4 class="fragment blue">Meet each other</h4>
+        <ul style="margin-top: 0;">
+          <li class="fragment">Who are you?</li>
+          <li class="fragment">What do you do?</li>
+          <li class="fragment">How did you hear about GDI?</li>
+          <li class="fragment">Have you worked with Bootstrap before?</li>
+        </ul>
+      </section><!-- /intros -->
+
+      <section>
+        <h2 class="gold">What we&rsquo;ll be covering today</h2>
+        <ul>
+          <li class="fragment">Downloading Bootstrap and adding it to an HTML document</li>
+          <li class="fragment">Working with Bootstrap&rsquo;s responsive grid system</li>
+          <li class="fragment">Styling images and buttons with Bootstrap classes</li>
+          <li class="fragment">Working with Bootstrap&rsquo;s reusable user interface components</li>
+          <li class="fragment"><b>If we have time:</b> incorporating one of Bootstrap’s JavaScript plugins into your resume</li>
+        </ul>
+      </section><!-- /what we'll be covering -->
+
+      <section class="">
+        <h2 class="gold">What we will <i>NOT</i> be covering today</h2>
+        <ul>
+          <li class="fragment">Custom Bootstrap theme development</li>
+          <li class="fragment">Styling CSS on top of what comes default with Bootstrap</li>
+          <li class="fragment">Using every Bootstrap component and JavaScript plugin</li>
+        </ul>
+      </section><!-- /what we're NOT covering -->
+
+      <section>
+        <h2 class="gold">So what is Bootstrap?</h2>
+        <p class="fragment huge_p">Bootstrap is a front end framework that helps speed up the development of responsive websites.</p>
+      </section><!-- /bootstrap definition -->
+
+      <section>
+        <h5 class="uppercase gold">What is Bootstrap?</h5>
+        <p class="big_p">Bootstrap is one of the most popular front end frameworks with 95,000+ stars and over 41,000 forks.</p>
+        <img src="assets/images/github.jpg" alt="Bootstrap is one of the most popular front end frameworks with 95,000+ stars and over 41,000 forks on Github."/>
+        <p class="fragment big_p">It&rsquo;s an open source project on GitHub, meaning it is free to use and anyone can contribute to its progress.</p>
+      </section><!-- open source -->
+
+      <section>
+        <h2 class="gold">What is a front end framework?</h2>
+        <p class="fragment big_p">A front end web framework is a collection of flexible, production-ready HTML, CSS, and JavaScript that we can use when we develop websites and applications.</p>
+        <p class="fragment big_p">Keep in mind that Bootstrap is not just a CSS grid. It also comes with components to build a fully-functional, visually-consistent website.</p>
+      </section><!-- what is a front end framework -->
+
+      <section>
+        <h2 class="gold">Why would I want to use Bootstrap?</h2>
+        <p class="fragment big_p">Bootstrap is designed to be responsive, which means that your HTML elements will respond to changes in screen size.</p>
+      </section><!--- /why would i want to use bootstrap -->
+
+      <section>
+        <h4 class="gold">So this desktop design</h4>
+        <div class="spacer"></div>
+        <img src="assets/images/desktop.png" alt="The Girl Develop It Minneapolis website as viewed on a desktop.">
+      </section><!-- /gdi desktop -->
+
+      <section>
+        <h4 class="gold">Also looks good on a tablet</h4>
+        <div class="spacer"></div>
+        <img src="assets/images/iPad.png" alt="The Girl Develop It Minneapolis website as viewed on an iPad.">
+      </section><!-- /gdi tablet -->
+
+      <section>
+        <h4 class="gold">And rad on a smartphone!</h4>
+        <div class="spacer"></div>
+        <img src="assets/images/iPhone.png" alt="The Girl Develop It Minneapolis website as viewed on an iPhone 5.">
+      </section><!-- /gdi mobile -->
+
+      <section>
+        <h5 class="uppercase gold">Why would I want to use Bootstrap?</h5>
+        <p class="big_p">Bootstrap is also mobile-first, which means that it prioritizes ease of viewing at a mobile level and builds progressively for larger screen sizes.</p>
+        <p class="fragment big_p">Best of all, Bootstrap allows designers &amp; developers of all levels to build sites quickly.</p>
+      </section><!--- /why would i want to use bootstrap -->
+
+      <section>
+        <h2 class="gold">What comes with Bootstrap?</h2>
+        <p class="fragment">If you haven&rsquo;t already, download the project files by going to <a href="#">!!!PROJECTFILESLINK!!!</a>.</p>
+        <hr>
+        <p class="fragment">Unzip the <span class="inline_code">building-with-bootstrap.zip</span> file and move the folder somewhere handy (in a sites folder, on your desktop, etc.).</p>
+        <hr>
+        <p class="fragment">Open Sublime Text, then open your <span class="inline_code">building-with-bootstrap</span> folder.</p>
+      </section><!--- /what comes with bootstrap -->
+
+      <section>
+        <p>Find the <span class="inline_code">bootstrap</span> folder within your project directory. Toggle the arrow next to it to reveal its contents. Keep toggling the subfolders until you can see all the files.</p>
+        <img src="assets/images/folder-structure.png" alt="The Bootstrap folder structure" style="width: 300px;" class="fragment">
+      </section><!--- /bootstrap file structure -->
+
+      <section>
+        <h3 class="blue">Base CSS</h3>
+        <ul style="margin-top: 0;">
+          <li class="fragment">Global CSS settings</li>
+          <li class="fragment">Styling for fundamental HTML elements such as tables, forms, buttons, and images</li>
+          <li class="fragment">The grid system</li>
+        </ul>
+      </section><!--- /base css -->
+
+      <section>
+        <h3 class="blue">Components</h3>
+        <p class="fragment">Styles for common reusable components</p>
+        <span class="fragment meta tiny_meta">We will be using the jumbotron, glyphicon, thumbnail, and progress bar components</span>
+      </section><!-- /components -->
+
+      <section>
+        <h3 class="blue">JavaScript</h3>
+        <p class="fragment">jQuery-based JavaScript plugins for interactive elements such as tooltips, modal windows, and carousels</p>
+        <span class="fragment meta tiny_meta">If we have time, we’ll be using the Scrollspy plugin</span>
+      </section><!-- /javascript -->
+
+      <section>
+        <h2 class="gold">Let&rsquo;s talk about the Bootstrap grid system</h2>
+        <p class="fragment big_p">Bootstrap&rsquo;s grid system is its most powerful and widely used feature.</p>
+        <span class="fragment meta tiny_meta">That&rsquo;s not a fact I can prove, but I&rsquo;m like 99.99999% sure its true!</span>
+      </section><!-- /the grid system -->
+
+      <section>
+        <p>The grid system is based on a 12-column grid and uses CSS classes to decide the width of each HTML element they&rsquo;re applied to.</p>
+        <img src="assets/images/12-col-grid.png" alt="Bootstrap&rsquo;s 12-column grid" style="width: 750px;">
+      </section><!-- /12 columns -->
+
+      <section>
+        <p>Each element can take up between 1 and 12 columns-worth of space.</p>
+        <img src="assets/images/column-space.png" alt="Bootstrap&rsquo;s 12-column grid" style="width: 750px;">
+      </section><!-- /column space -->
+
+      <section>
+        <h2 class="gold">Some grid system rules</h2>
+        <ul>
+          <li class="fragment">Rows must be placed within a <span class="inline_code">.container</span> (fixed-width) or <span class="inline_code">.container-fluid</span> (full-width) for proper alignment and padding</li>
+          <li class="fragment">Use <span class="inline_code">.row</span> elements to create horizontal groups of columns</li>
+          <li class="fragment">Content should be placed within columns, and only columns may be immediate children of rows</li>
+        </ul>
+      </section><!-- /grid system rules -->
+
+      <section>
+        <div class="skinny_pre">
+          <pre class="language-markup">
+            <code class="language-markup">
+              &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    [CONTENT FOR ROW]
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+        <p>or</p>
+        <div class="skinny_pre">
+          <pre class="language-markup">
+            <code class="language-markup">
+              &lt;div class=&quot;container-fluid&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                    [CONTENT FOR ROW]
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /container vs container-fluid -->
+
+      <section>
+        <h2 class="gold">See it in action</h2>
+        <p class="fragment big_p">Open up <span class="inline_code">slide-demo/container.html</span> in your browser.</p>
+        <p class="fragment big_p">Resize your browser to see where the columns break to fit 100% of the width.</p>
+      </section><!-- /container.html -->
+
+      <section>
+        <h2 class="gold">See it in action</h2>
+        <p class="fragment big_p">Open up <span class="inline_code">slide-demo/container-fluid.html</span> in your browser.</p>
+        <p class="fragment big_p">Resize your browser to see where the columns break to fit 100% of the width.</p>
+      </section><!-- /container-fluid.html -->
+
+      <section>
+        <h2 class="gold">Column classes</h2>
+        <img src="assets/images/column-classes.png" alt="Bootstrap&rsquo;s column classes" style="width: 750px;">
+      </section><!-- /column classes -->
+
+      <section>
+        <p>If you want to have two 50% columns on a mobile phone, you would use <span class="inline_code">.col-xs-6</span> nested in a <span class="inline_code">.row</span>, and the rows would be consistent on every device.</p>
+        <img src="assets/images/2-col-xs-6.png" alt="2 .col-xs-6 elements" style="width: 750px;">
+      </section><!-- /2 col-xs-6 -->
+
+      <section>
+        <h2 class="gold">2 50%-width columns</h2>
+        <div class="skinny_pre">
+          <pre class="language-markup">
+            <code class="language-markup">
+              &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-xs-6&quot;&gt;
+                    [COLUMN 1 CONTENT]
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-xs-6&quot;&gt;
+                    [COLUMN 2 CONTENT]
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /2 col-xs-6 -->
+
+      <section>
+        <p>If you want to have four 25% columns on a desktop, and would like them to break to 100% on a tablet, you would use <span class="inline_code">.col-md-3</span> nested in a .row.</p>
+        <img src="assets/images/4-col-md-3.png" alt="4 .col-md-3 elements" style="width: 750px;">
+      </section><!-- /4 col-md-3 -->
+
+      <section>
+        <h2 class="gold">4 25%-width columns</h2>
+        <div class="skinny_pre">
+          <pre class="language-markup">
+            <code class="language-markup">
+              &lt;div class=&quot;container&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-md-3&quot;&gt;
+                    [COLUMN 1 CONTENT]
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-3&quot;&gt;
+                    [COLUMN 2 CONTENT]
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-3&quot;&gt;
+                    [COLUMN 3 CONTENT]
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-md-3&quot;&gt;
+                    [COLUMN 4 CONTENT]
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /4 col-xs-3 -->
+
+      <section>
+        <h2 class="gold">Develop it</h2>
+      </section><!-- /develop it -->
+
+      <section>
+        <p>Open <span class="inline_code">slide-demo/index.html</span> in Sublime Text.</p>
+        <hr>
+        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder, and add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Building with Bootstrap Demo - GDI Minneapolis&lt;/title&gt;
+                &lt;link rel="stylesheet" href="../bootstrap/css/bootstrap.css"&gt;
+              &lt;/head&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /develop it -->
+
+      <section>
+        <p>Create a 2-column layout that will break down to 100% on small devices.</p>
+        <div class="fragment skinny_pre">
+          <pre>
+            <code class="language-markup">
+              &lt;body&gt;
+                &lt;div class="container"&gt;
+                  &lt;div class="row"&gt;
+                    &lt;div class="col-sm-6"&gt;
+                      Content
+                    &lt;/div&gt;
+                    &lt;div class="col-sm-6"&gt;
+                      Content
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/body&gt;
+            </code>
+          </pre>
+        </div>
+        <p class="fragment meta tiny_meta"><i>Extra credit:</i> Create a 3-column layout that will break down to 100% on large devices.</p>
+        <hr>
+        <p class="fragment">Open <span class="inline_code">index.html</span> in your browser and resize to see how the columns respond.</p>
       </section>
+
+      <section>
+        <h2 class="gold">Ok, but how is it doing that?!</h2>
+        <p class="fragment huge_p">Media queries</p>
+        <p class="fragment">Media query is a CSS technique introduced in CSS3.</p>
+        <p class="fragment">It lets you add <i>breakpoints</i> where certain parts of the design will behave differently on each side of the breakpoint.</p>
+        <p class="fragment">Bootstrap uses the breakpoints 768px, 992px, and 1200px</p>
+      </section><!-- /media queries -->
+
+      <section>
+        <h2 class="gold">Take a peek at Bootstrap&rsquo;s media queries</h2>
+        <p class="fragment">Open <span class="inline_code">bootstrap/css/bootstrap.css</span></p>
+        <hr>
+        <p class="fragment">Scroll to line <span class="inline_code">1616</span><br><span class="meta tiny_meta"><span class="inline_code">Ctrl + G</span> on Mac and Windows</span></p>
+        <hr>
+        <p class="fragment">This is where the grid system is defined in the CSS.</p>
+      </section><!-- /media queries -->
+
+      <section>
+        <h2 class="gold">A couple basic Bootstrap components</h2>
+      </section><!-- /basic bootstrap components -->
+
+      <section>
+        <h2 class="gold">Images</h2>
+        <p class="fragment"><a href="http://getbootstrap.com/css/#images">getbootstrap.com/css/#images</a></p>
+        <p class="fragment">Images can be made responsive with <span class="inline_code">.img-responsive</span>, which adds <span class="inline_code">max-width: 100%</span> and <span class="inline_code">height: auto</span> to scale the image to its parent container.</p>
+        <p class="fragment">Other styling classes: <span class="inline_code">.img-rounded</span>, <span class="inline_code">.img-circle</span> (only works on square images), and <span class="inline_code">.img-thumbnail</span></p>
+      </section><!-- /images -->
+
+      <section>
+        <h2 class="gold">Develop it</h2>
+        <p class="fragment">Add some responsive images to your columns in <span class="inline_code">slide-demo/index.html</span></p>
+        <hr>
+        <p class="fragment">Add a styling class to at least one of the images.</p>
+        <hr>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;img src="images/puppies.jpg" alt="Puppies!" class="img-responsive"&gt;
+              &lt;img src="images/donut.jpg" alt="Yummy donut" class="img-responsive img-circle"&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /develop it - images -->
+
+      <section>
+        <h2 class="gold">Buttons</h2>
+        <p class="fragment"><a href="http://getbootstrap.com/css/#buttons">http://getbootstrap.com/css/#buttons</a></p>
+        <p class="fragment">The button class <span class="inline_code">.btn</span> can be used on <span class="inline_code">&lt;button/&gt;</span>, <span class="inline_code">&lt;input/&gt;</span>, or <span class="inline_code">&lt;a/&gt;</span> elements.</p>
+        <p class="fragment">Additional classes can be used to provide extra visual weight and indentify primary button actions:<br><span class="inline_code">.btn-default</span>, <span class="inline_code">.btn-primary</span>, <span class="inline_code">.btn-success</span>, etc.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Develop it</h2>
+        <p class="fragment">Add some buttons or links with the button class to your columns in <span class="inline_code">slide-demo/index.html</span></p>
+        <hr>
+        <p class="fragment">Add a styling class to at least one of the buttons.</p>
+        <hr>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;button class="btn btn-default"&gt;This is a button&lt;/button&gt;
+              &lt;a href="btn btn-primary"&gt;This is a link but it looks like a button&lt;/a&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /develop it - buttons -->
+
+      <section>
+        <h2 class="gold">Time to put this all to use!</h2>
+        <p class="fragment big_p">We&rsquo;ll be making a simple resume site using Bootstrap&rsquo;s grid system and components.</p>
+      </section><!-- /resume intro -->
+
+      <section>
+        <p class="big_p">We&rsquo;ll be working in the <span class="inline_code">resume/</span> folder inside your project directory.</p>
+        <p class="fragment">The source code (finished version) of the resume is in the <span class="inline_code">resume-source-code/</span> folder in case you get stuck.</p>
+      </section><!-- /resume intro -->
+
+      <section>
+        <p>Open <span class="inline_code">resume/index.html</span> in Sublime Text.</p>
+        <hr>
+        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder, and add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Resume Site - Building with Bootstrap - GDI Minneapolis&lt;/title&gt;
+                &lt;link rel="stylesheet" href="../bootstrap/css/bootstrap.css"&gt;
+              &lt;/head&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- add bootstrap css -->
+
+      <section>
+        <h2 class="gold">Nav</h2>
+        <p class="fragment">Add a <span class="inline_code">&lt;nav&gt;</span> to the <span class="inline_code">&lt;header&gt;</span></p>
+        <hr>
+        <p class="fragment">Add a fluid container to the <span class="inline_code">&lt;nav&gt;</span></p>
+        <hr>
+        <p class="fragment">Add an unordered list to inside the container, and create 5 list items inside that.</p>
+      </section><!-- /nav -->
+
+      <section>
+        <h2 class="gold">Nav</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;header&gt;
+              &lt;nav&gt;
+                &lt;div class="container-fluid"&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/nav&gt;
+            &lt;/header&gt;
+          </code>
+        </pre>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Nav</h2>
+        <p>Inside each <span class="inline_code">&lt;li&gt;</span> add a link, but just add <span class="inline_code">#</span> as a placeholder inside the <span class="inline_code">href</span> attributes for now.</p>
+        <hr>
+        <p class="fragment">Inside each link add one of these section titles: About, Skills, Experience, Education, Portolio</p>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Skills&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Experience&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Education&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            </code>
+          </pre>
+        </div>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Nav</h2>
+        <p class="fragment">Open <span class="inline_code">resume/index.html</span> in your browser.</p>
+        <hr>
+        <p class="fragment">We want to restyle our nav links and can do it using built-in Bootstrap classes.</p>
+        <div class="fragment">
+          <p>Browse the documentation for a few minutes and see if you can figure out which classes to use to:</p>
+          <ol>
+            <li>Remove the bullets</li>
+            <li>Display the links next to each other instead of stacked</li>
+          </ol>
+        </div>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Nav</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;ul class="list-inline"&gt;
+              &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Skills&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Experience&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Education&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          </code>
+        </pre>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Jumbotron</h2>
+        <p class="fragment">Add a jumptron element after the <span class="inline_code">&lt;nav&gt;</span></p>
+        <hr>
+        <p class="fragment">Inside the jumbotron, add a heading 1 with your name, and a paragraph element with your job title.</p>
+        <hr>
+        <p class="fragment">Make your job title stand out with a <span class="inline_code">.lead</span> class.</p>
+      </section><!-- /jumbotron -->
+
+      <section>
+        <h2 class="gold">Jumbotron</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="jumbotron"&gt;
+              &lt;h1&gt;Your Name&lt;/h1&gt;
+              &lt;p class="lead"&gt;Your Job Title&lt;/p&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section><!-- /jumbotron continued -->
+
+      <section>
+        <h2 class="gold">Jumbotron</h2>
+        <p class="fragment">Open <span class="inline_code">resume/index.html</span> in your browser.</p>
+        <hr>
+        <p class="fragment">Things would probably look better if the content in the <span class="inline_code">&lt;header&gt;</span> was all centered.</p>
+        <p class="fragment">Browse the docs to find a class that will center the text of an element.</p>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+              &lt;header class="text-center"&gt;
+                ...
+              &lt;/header&gt;
+            </code>
+          </pre>
+        </div>
+        <hr>
+        <p class="fragment">Refresh your browser to see if it worked.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Setting up our sections</h2>
+        <p class="fragment">Create a <span class="inline_code">section</span> with a nested <span class="inline_code">.container</span></p>
+        <hr>
+        <p class="fragment">Add 2 columns, one with a class of <span class="inline_code">.col-md-3</span> and the other with the class of <span class="inline_code">.col-md-9</span><br><span class="meta tiny_meta">Remember the <span class="inline_code">.row</span>!</span></p>
+        <hr>
+        <div class="fragment">
+          <p>Let&rsquo;s add some comments to describe what content we want to put inside each column.</p>
+          <pre>
+            <code class="language-markup">
+              &lt;!-- title column --&gt;
+              &lt;div class="col-md-3"&gt;&lt;/div&gt;
+              &lt;!-- content column --&gt;
+              &lt;div class="col-md-9"&gt;&lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="gold">Setting up our sections</h2>
+        <p class="fragment">Copy and paste the <span class="inline_code">section</span> we just created until you have 5 of them.</p>
+        <hr>
+        <p class="fragment">Inside the title columns of each add a heading 2 element with the section title from the corresponding nav link.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Setting up our sections</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;section&gt;
+              &lt;!-- title column --&gt;
+              &lt;div class="col-md-3"&gt;
+                &lt;h2&gt;About&lt;/h2&gt;
+              &lt;/div&gt;
+              ...
+            &lt;/section&gt;
+            &lt;section&gt;
+              &lt;!-- title column --&gt;
+              &lt;div class="col-md-3"&gt;
+                &lt;h2&gt;Skills&lt;/h2&gt;
+              &lt;/div&gt;
+              ...
+            &lt;/section&gt;
+            ...
+          </code>
+        </pre>
+      </section>
+
+     <!--  <section>
+        <h2 class="gold">Setting up our sections</h2>
+        <p class="fragment">Add an id to each <span class="inline_code">section</span> that matches its heading. Make sure you make it all lowercase, though!</p>
+        <hr>
+        <p class="fragment">Go back to your nav links and add the corresponding section id inside the <span class="inline_code">href</span> attribute, after the <span class="inline_code">#</span> we left there earlier.</p>
+        <hr>
+        <p class="fragment">Refresh your browser. Click on each nav link; you should be jumped down to the corresponding section.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Setting up our sections</h2>
+        <pre>
+          <code class="language-markup">
+             &lt;ul class="list-inline"&gt;
+              &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#skills"&gt;Skills&lt;/a&gt;&lt;/li&gt;
+              ...
+            &lt;/ul&gt;
+            ...
+            &lt;section id="about"&gt;...&lt;/section&gt;
+            &lt;section id="skills"&gt;...&lt;/section&gt;
+          </code>
+        </pre>
+      </section> -->
+
+      
     </div><!-- /slides -->
 
     <footer>
@@ -52,6 +641,7 @@
 
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
+  <script src="assets/scripts/production/prism.min.js"></script>
   <script>
   // See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
   Reveal.initialize({
@@ -62,7 +652,7 @@
       // Display the page number of the current slide
       slideNumber: true,
       // Push each slide change to the browser history
-      history: false,
+      history: true,
       // Enable keyboard shortcuts for navigation
       keyboard: true,
       // Enable the slide overview mode

@@ -23,9 +23,11 @@
 
 /* - - - General - - - */
 .slides, body {
-  background: #1f4256;
   color: #fff;
   font-family: "Gotham-Bold", Impact, sans-serif; }
+
+body {
+  background: #1f4256; }
 
 #gdi .uppercase {
   text-transform: uppercase; }
@@ -39,6 +41,34 @@
 #gdi .monaco_font {
   font-family: "Monaco", sans-serif !important;
   text-align: left; }
+
+#gdi p, #gdi ul, #gdi ol {
+  font-size: 28px;
+  line-height: 1.4;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#gdi ul {
+  text-align: center;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none; }
+
+#gdi .big_p {
+  font-size: 40px;
+  line-height: 1.2; }
+
+#gdi .huge_p {
+  font-size: 50px;
+  line-height: 1.2; }
+
+#gdi li {
+  margin: 15px 0;
+  line-height: 1.2; }
+
+#gdi b {
+  font-family: 'Gotham-Bold'; }
 
 .mono_font {
   font-family: "Monaco", sans-serif !important;
@@ -55,6 +85,9 @@
 
 #gdi .indented {
   margin-left: 2em !important; }
+
+#gdi .block {
+  display: block; }
 
 /* - - - Footer - - - */
 #logistics {
@@ -108,7 +141,10 @@
   color: #fff !important; }
 
 #gdi .pink {
-  color: #FDD2D2 !important; }
+  color: #f05b62 !important; }
+
+#gdi .navy {
+  color: #1f4256 !important; }
 
 #gdi .meta {
   font-family: "Gotham", Impact, sans-serif;
@@ -127,15 +163,20 @@
   font-size: 16pt; }
 
 #gdi h1, #gdi h3, #gdi h4, #gdi h5, #gdi h2 {
-  margin: 0.5em 0 0 0;
+  margin: 15px 0;
   font-size: 50pt;
+  line-height: 1;
   color: #Fff; }
 
 #gdi h1 {
   font-size: 64pt; }
 
 #gdi h2 {
-  font-size: 54pt; }
+  font-size: 54pt;
+  margin-bottom: 30px; }
+
+#gdi h3 {
+  font-size: 44pt; }
 
 #gdi h4 {
   font-size: 34pt; }
@@ -149,7 +190,7 @@
   margin: 24px 0 0 25px; }
   #gdi .spacer.big_spacer {
     height: 1px;
-    margin: 74px 0 0 75px; }
+    margin: 49px 0 0 50px; }
   #gdi .spacer.small_spacer {
     height: 1px;
     margin: 9px 0 0 10px; }
@@ -167,21 +208,23 @@
   border-bottom: 1px dashed rgba(255, 255, 255, 0.3); }
 
 #gdi pre {
-  width: 110%;
-  margin: 1em;
-  margin-left: -10%;
-  padding: 2.5%;
-  background-color: #282828;
-  font-family: "Monaco", sans-serif;
-  font-size: 18pt !important;
-  color: #FDD2D2;
-  line-height: 1.25em;
-  text-align: left;
-  border-radius: 20px;
-  box-shadow: 0 0 5px rgba(50, 50, 50, 0.8); }
+  background: #282828;
+  font-family: 'Monaco', monospace;
+  font-size: 15px !important;
+  color: #ffffff;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none; }
 
-#gdi code[class*="language-"], #gdi pre[class*="language-"] {
-  font-size: 15pt !important; }
+#gdi pre code {
+  text-shadow: none;
+  padding: 0;
+  max-height: none;
+  display: block;
+  margin-top: -22px;
+  margin-bottom: -44px; }
 
 #gdi .no_margin_pre pre {
   margin: 0 auto;
@@ -205,7 +248,8 @@
   font-size: 11pt !important; }
 
 #gdi a {
-  color: #8ef1d4; }
+  color: #fff;
+  text-decoration: underline; }
 
 #gdi table {
   width: 70%;
