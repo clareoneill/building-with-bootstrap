@@ -299,16 +299,18 @@
       </section><!-- /develop it -->
 
       <section>
-        <p>Open <span class="inline_code">slide-demo/index.html</span> in Sublime Text.</p>
+        <p>Open <span class="inline_code">slide-demo/demo.html</span> in Sublime Text.</p>
         <hr>
-        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder, and add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
+        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder we downloaded, and add it to the <span class="inline_code">css/</span> folder.</p>
+        <hr>
+        <p class="fragment">Add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
         <div class="fragment">
           <pre>
             <code class="language-markup">
               &lt;head&gt;
                 &lt;meta charset="UTF-8"&gt;
                 &lt;title&gt;Building with Bootstrap Demo - GDI Minneapolis&lt;/title&gt;
-                &lt;link rel="stylesheet" href="../bootstrap/css/bootstrap.css"&gt;
+                &lt;link rel="stylesheet" href="css/bootstrap.css"&gt;
               &lt;/head&gt;
             </code>
           </pre>
@@ -350,7 +352,7 @@
 
       <section>
         <h2 class="gold">Take a peek at Bootstrap&rsquo;s media queries</h2>
-        <p class="fragment">Open <span class="inline_code">bootstrap/css/bootstrap.css</span></p>
+        <p class="fragment">Open <span class="inline_code">bootstrap.css</span></p>
         <hr>
         <p class="fragment">Scroll to line <span class="inline_code">1616</span><br><span class="meta tiny_meta"><span class="inline_code">Ctrl + G</span> on Mac and Windows</span></p>
         <hr>
@@ -370,7 +372,7 @@
 
       <section>
         <h2 class="gold">Develop it</h2>
-        <p class="fragment">Add some responsive images to your columns in <span class="inline_code">slide-demo/index.html</span></p>
+        <p class="fragment">Add some responsive images to your columns in <span class="inline_code">slide-demo/demo.html</span></p>
         <hr>
         <p class="fragment">Add a styling class to at least one of the images.</p>
         <hr>
@@ -393,7 +395,7 @@
 
       <section>
         <h2 class="gold">Develop it</h2>
-        <p class="fragment">Add some buttons or links with the button class to your columns in <span class="inline_code">slide-demo/index.html</span></p>
+        <p class="fragment">Add some buttons or links with the button class to your columns in <span class="inline_code">slide-demo/demo.html</span></p>
         <hr>
         <p class="fragment">Add a styling class to at least one of the buttons.</p>
         <hr>
@@ -420,14 +422,16 @@
       <section>
         <p>Open <span class="inline_code">resume/index.html</span> in Sublime Text.</p>
         <hr>
-        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder, and add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
+        <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap/</span> folder we downloaded, and add it to the <span class="inline_code">css/</span> folder.</p>
+        <hr>
+        <p class="fragment">Add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
         <div class="fragment">
           <pre>
             <code class="language-markup">
               &lt;head&gt;
                 &lt;meta charset="UTF-8"&gt;
                 &lt;title&gt;Resume Site - Building with Bootstrap - GDI Minneapolis&lt;/title&gt;
-                &lt;link rel="stylesheet" href="../bootstrap/css/bootstrap.css"&gt;
+                &lt;link rel="stylesheet" href="css/bootstrap.css"&gt;
               &lt;/head&gt;
             </code>
           </pre>
@@ -436,7 +440,7 @@
 
       <section>
         <h2 class="gold">Nav</h2>
-        <p class="fragment">Add a <span class="inline_code">&lt;nav&gt;</span> to the <span class="inline_code">&lt;header&gt;</span></p>
+        <p class="fragment">Add a <span class="inline_code">&lt;nav&gt;</span> inside a <span class="inline_code">&lt;header&gt;</span></p>
         <hr>
         <p class="fragment">Add a fluid container to the <span class="inline_code">&lt;nav&gt;</span></p>
         <hr>
@@ -517,7 +521,7 @@
         <h2 class="gold">Jumbotron</h2>
         <p class="fragment">Add a jumptron element after the <span class="inline_code">&lt;nav&gt;</span></p>
         <hr>
-        <p class="fragment">Inside the jumbotron, add a heading 1 with your name, and a paragraph element with your job title.</p>
+        <p class="fragment">Inside the jumbotron, add a <span class="inline_code">h1</span> with your name, and a paragraph element with your job title.</p>
         <hr>
         <p class="fragment">Make your job title stand out with a <span class="inline_code">.lead</span> class.</p>
       </section><!-- /jumbotron -->
@@ -576,7 +580,7 @@
         <h2 class="gold">Setting up our sections</h2>
         <p class="fragment">Copy and paste the <span class="inline_code">section</span> we just created until you have 5 of them.</p>
         <hr>
-        <p class="fragment">Inside the title columns of each add a heading 2 element with the section title from the corresponding nav link.</p>
+        <p class="fragment">Inside the title columns of each add a <span class="inline_code">h2</span> with the section title from the corresponding nav link.</p>
       </section>
 
       <section>
@@ -601,9 +605,157 @@
           </code>
         </pre>
       </section>
+  
+      <section>
+        <h2 class="gold">About</h2>
+        <p class="fragment">Add a new <span class="inline_code">.row</span> inside the content column.</p>
+        <hr>
+        <p class="fragment">Create 2 columns, one that spans 2/3 of the container and and one that spans 1/3 of the container. Both of them should break down to 100% on small devices.</p>
+        <hr>
+        <p class="fragment">Add an image to the larger column and make it a circle (it should be responsive as well).</p>
+        <hr>
+        <p class="fragment">Add a couple paragraphs about you after the image.</p>
+      </section>
 
-     <!--  <section>
-        <h2 class="gold">Setting up our sections</h2>
+      <section>
+        <h2 class="gold">About</h2>
+        <p class="fragment">In the smaller column, add your email and phone number with the corresponding glyphicon for each (refer to the documentation).</p>
+        <hr>
+        <p class="fragment"><i>Extra credit:</i> Add your address with a matching glyphicon as well.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">About</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="col-md-9"&gt;
+              &lt;div class="row"&gt;
+                &lt;div class="col-sm-8"&gt;
+                  &lt;img src="image.jpg" alt="about image" class="img-circle"&gt;
+                  &lt;p&gt;Mlkshk tacos lomo, selfies blog crucifix shabby.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                  &lt;ul class="list-unstyled"&gt;
+                    &lt;li&gt;&lt;span class="glyphicon glyphicon-phone"&gt;&lt;/span&gt; 555-555-5555&lt;/li&gt;
+                    &lt;li&gt;&lt;span class="glyphicon glyphicon-envelope"&gt;&lt;/span&gt;your_email@gmail.com&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2 class="gold">Skills</h2>
+        <p class="fragment">Inside the content column, list your skills inside <span class="inline_code">h5</span> elements.</p>
+        <hr>
+        <p class="fragment">Under each skill add a progress bar.<br><span class="meta tiny_meta">Copy and paste from the documentation.</span></p>
+        <hr>
+        <p class="fragment">Update the <span class="inline_code">width</span> properties to accurately reflect how confident you are in each skill.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Skills</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;h5&gt;HTML&lt;/h5&gt;
+            &lt;div class="progress"&gt;
+              &lt;div class="progress-bar" style="width: 95%"&gt;
+                &lt;span class="sr-only"&gt;95% complete&lt;/span&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2 class="gold">Experience</h2>
+        <p class="fragment">Add a new <span class="inline_code">.row</span> inside the content column.</p>
+        <hr>
+        <p class="fragment">Create 2 columns, one that spans 1/4 of the container and and one that spans 3/4 of the container. Both of them should break down to 100% on medium devices.</p>
+        <hr>
+        <p class="fragment">In the larger column add a company name inside a <span class="inline_code">h3</span>, followed by your job title inside a <span class="inline_code">h4</span>, followed by a paragraph with a brief description of the job.</p>
+        <hr>
+        <p class="fragment">Inside the smaller column add a <span class="inline_code">h5</span> with the date range of your employment with the company.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Experience</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-3"&gt;
+                &lt;h5&gt;6/2016&ndash;present&lt;/h5&gt;
+              &lt;/div&gt;
+              &lt;div class="col-sm-9"&gt;
+                &lt;h3&gt;Clockwork&lt;/h3&gt;
+                &lt;h4&gt;Front End Developer&lt;/h4&gt;
+                &lt;p&gt;Direct trade craft beer hammock, messenger bag retro knausgaard.&lt;/p&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <p>Add more job experiences by copy+pasting the entire <span class="inline_code">.row</span> and updating the information.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Education</h2>
+        <p class="fragment">Education entries are formatted the same as job experience entries, so follow those directions again.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Portfolio</h2>
+        <p class="fragment">Create three columns that each take up 1/3 of the container width. They should break down to 100% on small screens.</p>
+        <hr>
+        <p class="fragment">Inside each column add a <span class="inline_code">.thumbnail</span> div with a <span class="inline_code">.text-center</span> class.</p>
+        <hr>
+        <p class="fragment">inside each thumbnail add a project image, <span class="inline_code">h4</span> with the project title, and <span class="inline_code">h5</span> with a project category.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Portfolio</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;div class="row"&gt;
+              &lt;div class="col-sm-4"&gt;
+                &lt;div class="thumbnail text-center"&gt;
+                  &lt;img src="image.jpg" alt="HTML &amp; CSS" class="img-responsive"&gt;
+                  &lt;h4&gt;Project A&lt;/h4&gt;
+                  &lt;h5&gt;HTML &amp; CSS&lt;/h5&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              ...
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <p>Add more projects by copy+pasting the entire <span class="inline_code">.row</span> and updating the information.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Footer</h2>
+        <p class="fragment">Add a footer with a nested <span class="inline_code">.container</span></p>
+        <hr>
+        <p class="fragment">Add a copyright (<span class="inline_code">&amp;copy;</span>) inside a <span class="inline_code">&lt;small&gt;</span> element.</p>
+        <hr>
+        <p class="fragment">Center the copyright.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Footer</h2>
+        <pre>
+          <code class="language-markup">
+            &lt;footer&gt;
+               &lt;div class="container text-center"&gt;
+                 &lt;small&gt;&copy; 2016 Your Name&lt;/small&gt;
+               &lt;/div&gt;
+             &lt;/footer&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2 class="gold">Finishing up</h2>
         <p class="fragment">Add an id to each <span class="inline_code">section</span> that matches its heading. Make sure you make it all lowercase, though!</p>
         <hr>
         <p class="fragment">Go back to your nav links and add the corresponding section id inside the <span class="inline_code">href</span> attribute, after the <span class="inline_code">#</span> we left there earlier.</p>
@@ -612,7 +764,7 @@
       </section>
 
       <section>
-        <h2 class="gold">Setting up our sections</h2>
+        <h2 class="gold">Finishing up</h2>
         <pre>
           <code class="language-markup">
              &lt;ul class="list-inline"&gt;
@@ -625,9 +777,16 @@
             &lt;section id="skills"&gt;...&lt;/section&gt;
           </code>
         </pre>
-      </section> -->
+      </section>
 
-      
+      <section>
+        <h2 class="gold">Finishing up</h2>
+        <p class="fragment">Our resume site is a little plain right now. We didn&rsquo;t have time to cover writing custom CSS that works with Bootstrap so I created a stylesheet ahead of time to add some styling to our site.</p>
+        <hr>
+        <p class="fragment">Find it in <span class="inline_code">resume-source-code/css/styles.css</span>. Copy and paste the file into the <span class="inline_code">resume/css/</span> folder, then add it to the <span class="inline_code">head</span> of your resume site.</p>
+        <hr>
+        <p class="fragment">Refresh your browser to see how a few extra lines of CSS can change the site.</p>
+      </section>
     </div><!-- /slides -->
 
     <footer>

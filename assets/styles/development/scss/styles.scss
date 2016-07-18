@@ -2,7 +2,7 @@
   font-family: "Gotham";
   font-style: normal;
   font-weight: normal;
-  src: local("Gotham"), url("../../../../reveal.js/css/theme/fonts/Gotham/Gotham-Medium.otf") format("opentype");
+  src: local("Gotham"), url("../../fonts/Gotham/Gotham-Medium.otf") format("opentype");
 }
 
 
@@ -10,7 +10,7 @@
   font-family: "Gotham-Book";
   font-style: normal;
   font-weight: normal;
-  src: local("Gotham-Book"), url("../../../../reveal.js/css/theme/fonts/Gotham/Gotham-Book.otf") format("opentype");
+  src: local("Gotham-Book"), url("../../fonts/Gotham/Gotham-Book.otf") format("opentype");
 }
 
 
@@ -18,14 +18,14 @@
   font-family: "Gotham-Italic";
   font-style: italic;
   font-weight: normal;
-  src: local("Gotham-Italic"), url("../../../../reveal.js/css/theme/fonts/Gotham/Gotham-MediumItalic.otf") format("opentype");
+  src: local("Gotham-Italic"), url("../../fonts/Gotham/Gotham-MediumItalic.otf") format("opentype");
 }
 
 
 @font-face {
   font-family: "Gotham-Bold";
   font-weight: bold;
-  src: local("Gotham-Bold"), url("../../../../reveal.js/css/theme/fonts/Gotham/Gotham-Bold.otf") format("opentype");
+  src: local("Gotham-Bold"), url("../../fonts/Gotham/Gotham-Bold.otf") format("opentype");
 }
 
 
@@ -33,7 +33,7 @@
 
 .slides, body {
   color: #fff;
-  font-family: "Gotham-Bold", Impact, sans-serif;
+  font-family: "Gotham-Bold", Helvetica, Arial, sans-serif;
 }
 
 body {
