@@ -25,14 +25,14 @@
       <section>
         <h1 class="uppercase no_margin" style="font-size: 60px;">Building With Bootstrap</h1>
         <div class="meta blue uppercase small_meta">2016-07-30 &#8729; GDI MPLS &#8729; Clare O&rsquo;Neill</div>
-        <img src="assets/images/gdi_logo_badge.png" class="top_margin width_50" style="width:30%;">
+        <img src="assets/images/gdi_logo_badge.png" class="top_margin width_50" style="width:25%;">
 
         <div class="spacer"></div>
 
         <div >
           <div class="meta gold tiny_meta">Network: <span class="white">!!!NETWORK!!!</span></div>
           <div class="meta gold tiny_meta">Password: <span class="white">!!!PASSWORD!!!</span></div>
-          <div class="meta gold tiny_meta">Slides: <span class="white">!!!SLIDEURL!!!</span></div>
+          <div class="meta gold tiny_meta">Slides:<br><span class="white"><a href="https://gdiminneapolis.github.io/building-with-bootstrap/#/">https://gdiminneapolis.github.io/building-with-bootstrap/#/</a></span></div>
           <div class="meta gold tiny_meta">Project Files:<br><span class="white"><a href="https://github.com/gdiminneapolis/building-with-bootstrap-project-files/archive/master.zip">github.com/gdiminneapolis/building-with-bootstrap-project-files/archive/master.zip</a></span></div>
         </div>
       </section><!-- intro -->
@@ -50,6 +50,12 @@
             <li>Have fun</li>
           </ul>
         </div>
+      </section><!-- /welcome -->
+
+      <section>
+        <h2 class="gold">Sponsor</h2>
+        <img src="assets/images/veritas.jpg" alt="Veritas logo">
+        <p class="big_p">Big thank you to Veritas for providing lunch and our classroom space!</p>
       </section><!-- /welcome -->
 
       <section>
@@ -435,7 +441,21 @@
         <hr>
         <p class="fragment">Find <span class="inline_code">bootstrap.css</span> inside the <span class="inline_code">bootstrap-3.3.6-dist/</span> folder we downloaded, and add it to the <span class="inline_code">resume/css/</span> folder.</p>
         <hr>
-        <p class="fragment">Add it to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
+        <p class="fragment">Find the <span class="inline_code">fonts/</span> directory inside the <span class="inline_code">bootstrap-3.3.6-dist/</span> folder we downloaded, and add it to the <span class="inline_code">resume/</span> folder.</p>
+      </section><!-- add bootstrap css -->
+
+      <section>
+        <p>In order for our navbar to work on mobile, we&rsquo;ll need Bootstrap&rsquo;s JavaScript as well.</p>
+        <hr>
+        <p class="fragment">Find <span class="inline_code">bootstrap.js</span> inside the <span class="inline_code">bootstrap-3.3.6-dist/</span> folder we downloaded, and add it to the <span class="inline_code">resume/js/</span> folder.</p>
+      </section>
+
+      <section>
+        <img src="assets/images/resume-css.png" alt="Resume files">
+      </section>
+
+      <section>
+        <p>Add <span class="inline_code">bootstrap.css</span> to the <span class="inline_code">head</span> of <span class="inline_ccode">index.html</span>.<br><span class="span meta tiny_meta">Remember to use the relative path!</span></p>
         <div class="fragment">
           <pre>
             <code class="language-markup">
@@ -447,31 +467,33 @@
             </code>
           </pre>
         </div>
-      </section><!-- add bootstrap css -->
+      </section>
 
       <section>
-        <h2 class="gold">Nav</h2>
-        <p class="fragment">Add a <span class="inline_code">&lt;nav&gt;</span> inside a <span class="inline_code">&lt;header&gt;</span></p>
-        <hr>
-        <p class="fragment">Add a fluid container to the <span class="inline_code">&lt;nav&gt;</span></p>
-        <hr>
-        <p class="fragment">Add an unordered list to inside the container, and create 5 list items inside that.</p>
-      </section><!-- /nav -->
+        <p>Add <span class="inline_code">jquery.min.js</span> and <span class="inline_code">bootstrap.js</span> to <span class="inline_code">index.html</span> right above the closing <span class="inline_code">&lt;/body&gt;</span> tag.</p>
+        <div class="fragment">
+          <pre>
+            <code class="language-markup">
+                &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+                &lt;script src="js/bootstrap.js"&gt;&lt;/script&gt;
+              &lt;/body&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
 
       <section>
-        <h2 class="gold">Nav</h2>
-        <pre>
+        <h2 class="gold">Navbar</h2>
+        <p class="fragment">Add a <span class="inline_code">&lt;nav&gt;</span> with the classes <span class="inline_code">navbar</span> and <span class="inline_code">navbar-default</span> inside a <span class="inline_code">&lt;header&gt;</span> element.</p>
+        <hr>
+        <p class="fragment">Add a <span class="inline_code">.container-fluid</span> to the nav.</p>
+        <hr>
+        <pre class="fragment">
           <code class="language-markup">
             &lt;header&gt;
-              &lt;nav&gt;
+              &lt;nav class="navbar navbar-default"&gt;
                 &lt;div class="container-fluid"&gt;
-                  &lt;ul&gt;
-                    &lt;li&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;/li&gt;
-                  &lt;/ul&gt;
+
                 &lt;/div&gt;
               &lt;/nav&gt;
             &lt;/header&gt;
@@ -480,50 +502,55 @@
       </section><!-- /nav continued -->
 
       <section>
-        <h2 class="gold">Nav</h2>
-        <p>Inside each <span class="inline_code">&lt;li&gt;</span> add a link, but just add <span class="inline_code">#</span> as a placeholder inside the <span class="inline_code">href</span> attributes for now.</p>
-        <hr>
-        <p class="fragment">Inside each link add one of these section titles: About, Skills, Experience, Education, Portolio</p>
-        <div class="fragment">
-          <pre>
-            <code class="language-markup">
-              &lt;ul&gt;
-                &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Skills&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Experience&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Education&lt;/a&gt;&lt;/li&gt;
-                &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
-              &lt;/ul&gt;
-            </code>
-          </pre>
-        </div>
-      </section><!-- /nav continued -->
+        <h2 class="gold">Navbar</h2>
+        <p class="big_p">The navbar can get complicated from here, so we&rsquo;re going to copy and paste the pieces we want from the documentation.</p>
+        <p class="big_p"><a href="http://getbootstrap.com/components/#navbar">getbootstrap.com/components/#navbar</a></p>
+      </section>
 
       <section>
-        <h2 class="gold">Nav</h2>
-        <p class="fragment">Open <span class="inline_code">resume/index.html</span> in your browser.</p>
-        <hr>
-        <p class="fragment">We want to restyle our nav links and can do it using built-in Bootstrap classes.</p>
-        <div class="fragment">
-          <p>Browse the documentation for a few minutes and see if you can figure out which classes to use to:</p>
-          <ol>
-            <li>Remove the bullets</li>
-            <li>Display the links next to each other instead of stacked</li>
-          </ol>
-        </div>
-      </section><!-- /nav continued -->
-
-      <section>
-        <h2 class="gold">Nav</h2>
-        <pre>
+        <h2 class="gold">Navbar</h2>
+        <p>Inside the nav, add a button that will toggle the navigation menu on mobile.</p>
+        <pre class="fragment">
           <code class="language-markup">
-            &lt;ul class="list-inline"&gt;
-              &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#"&gt;Skills&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#"&gt;Experience&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#"&gt;Education&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
+            &lt;button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"&gt;
+              &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+              &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+            &lt;/button&gt;
+          </code>
+        </pre>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Navbar</h2>
+        <p>Now we want to grab the div that has the classes <span class="inline_code">collapse navbar-collapse</span>, including the <span class="inline_code">&lt;ul&gt;</span>, and paste it as a sibling of the toggle button.</p>
+        <pre class="fragment">
+          <code class="language-markup">
+            &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;navbar&quot;&gt;
+              &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+
+              &lt;/div&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section><!-- /nav continued -->
+
+      <section>
+        <h2 class="gold">Navbar</h2>
+        <p>Finally, add a list item with a link inside of it for each of these sections we&rsquo;ll be creating:</p>
+        <p class="fragment">About, Skills, Experience, Education, Portfolio</p>
+        <hr>
+        <p class="fragment">The <span class="inline_code">href</span> attribute of each link should be set to <span class="inline_code">#</span > for now.</p>
+        <hr>
+        <pre class="fragment">
+          <code class="language-markup">
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Skills&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Experience&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Education&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
           </code>
         </pre>
       </section><!-- /nav continued -->
@@ -797,7 +824,45 @@
         <p class="fragment">Find it in <span class="inline_code">resume-source-code/css/styles.css</span>. Copy and paste the file into the <span class="inline_code">resume/css/</span> folder, then add it to the <span class="inline_code">head</span> of your resume site.</p>
         <hr>
         <p class="fragment">Refresh your browser to see how a few extra lines of CSS can change the site.</p>
+      </section><!-- /finishing up -->
+
+      <section>
+        <h2 class="gold">BONUS: Adding some JavaScript</h2>
+        <p class="fragment">The JavaScript plugin we&rsquo;re going to use is called Scrollspy, but all Bootstrap&rsquo;s JavaScript comes packaged in one file together.</p>
+        <p class="fragment">Scrollspy works by targetting the links inside an element we select.</p>
+        <p class="fragment">The easiest and fastest way to do that is to use an element&rsquo;s ID.</p>
+      </section><!-- /javascript -->
+
+      <section>
+        <h2 class="gold">Scrollspy</h2>
+        <p class="fragment">Earlier we gave the <span class="inline_code">&lt;div&gt;</span> <i>wrapping</i> the nav <span class="inline_code">&lt;ul&gt;</span> an id of <span class="inline_code">navbar</span>.</span></p>
+        <p class="fragment">That&rsquo;s the ID we&rsquo;re going to use to trigger Scrollspy.</p>
       </section>
+
+      <section>
+        <h2 class="gold">Scrollspy</h2>
+        <p class="fragment">Right above the closing <span class="inline_code">&lt;/body&gt;</span> tag, add a new <span class="inline_code">&lt;script&gt;</span> element.</p>
+        <hr>
+        <p class="fragment">Attach the scrollspy function to the body, and target the navbar ID.</p>
+        <hr>
+        <pre class="fragment">
+          <code class="language-markup">
+            &lt;script&gt;
+              $(&apos;body&apos;).scrollspy({ target: &apos;#navbar&apos; });
+            &lt;/script&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h2 class="gold">Scrollspy</h2>
+        <p class="fragment">Open <span class="inline_code">index.html</span> in your browser and scroll or click on the navigation links to see how Scrollspy affects the navigation.</p>
+      </section>
+
+      <section>
+        <h2 class="gold">Take our survey</h2>
+        <p class="big_p"><a href="bit.ly/building-with-bootstrap">bit.ly/building-with-bootstrap</a></p>
+      </section><!-- /survey -->
     </div><!-- /slides -->
 
     <footer>
