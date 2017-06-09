@@ -189,11 +189,12 @@ body {
   .tiny_meta {
     font-size: 16pt;
   }
-  h1, h3, h4, h5, h2 {
+  h1, h2, h3, h4, h5, h6 {
     margin: 15px 0;
     font-size: 50pt;
     line-height: 1;
     color: #Fff;
+    hyphens: none;
   }
   h1 {
     font-size: 64pt;

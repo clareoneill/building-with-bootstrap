@@ -21,4 +21,16 @@ This hands-on workshop will cover:
 ## What to complete before class
 * Download Sublime Text 2 or 3 (http://www.sublimetext.com/)
 * Have a modern browser installed on your laptop (Chrome or Firefox)
-* Download the workshop files
+* Download the workshop files (https://github.com/gdiminneapolis/building-with-bootstrap-project-files/archive/master.zip)
+
+## To edit the presentation files
+Install the node modules: `npm install`
+
+Clone the Reveal.js submodule:
+  1. `cd reveal.js`
+  1. `git submodule init`
+  1. `git submodule update`
+  
+Start the server: `gulp serve`
+
+Run the build: `gulp watch`

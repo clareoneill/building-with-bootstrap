@@ -162,11 +162,14 @@ body {
 #gdi .tiny_meta {
   font-size: 16pt; }
 
-#gdi h1, #gdi h3, #gdi h4, #gdi h5, #gdi h2 {
+#gdi h1, #gdi h2, #gdi h3, #gdi h4, #gdi h5, #gdi h6 {
   margin: 15px 0;
   font-size: 50pt;
   line-height: 1;
-  color: #Fff; }
+  color: #Fff;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
 #gdi h1 {
   font-size: 64pt; }
